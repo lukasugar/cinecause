@@ -1,0 +1,197 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #080f20;
+  --surface-1: #131f36;
+  --surface-2: #1b2b45;
+  --text-strong: #f3f6fc;
+  --text-muted: #b9c4da;
+  --accent: #3d7aff;
+  --accent-2: #34c6ff;
+  --success: #3ecf8e;
+  --danger: #ff6b7d;
+  --border-soft: #2f4368;
+  --shadow-soft: 0 10px 30px rgba(4, 10, 22, 0.35);
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--text-strong);
+  --font-sans: var(--font-body);
+}
+
+body {
+  margin: 0;
+  color: var(--text-muted);
+  font-family: var(--font-body), sans-serif;
+}
+
+.app-shell {
+  background:
+    radial-gradient(circle at 15% -10%, rgba(52, 198, 255, 0.22), transparent 35%),
+    radial-gradient(circle at 85% 0%, rgba(61, 122, 255, 0.24), transparent 38%),
+    linear-gradient(145deg, #060d1f 0%, #08112a 44%, #070d20 100%);
+}
+
+.app-shell::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.12;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.35) 0.7px, transparent 0.7px);
+  background-size: 4px 4px;
+  z-index: 0;
+}
+
+.page-shell {
+  position: relative;
+  z-index: 1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--text-strong);
+  font-family: var(--font-display), serif;
+  letter-spacing: -0.015em;
+}
+
+a,
+button {
+  transition: color 180ms ease, border-color 180ms ease, background-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 2px;
+}
+
+.page-container {
+  margin-inline: auto;
+  max-width: 80rem;
+  padding: 3rem 1rem;
+}
+
+.section-block {
+  border: 1px solid color-mix(in srgb, var(--border-soft) 72%, transparent);
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--surface-1) 78%, transparent);
+  box-shadow: var(--shadow-soft);
+}
+
+.surface-card {
+  border: 1px solid color-mix(in srgb, var(--border-soft) 76%, transparent);
+  border-radius: 0.9rem;
+  background: color-mix(in srgb, var(--surface-2) 86%, transparent);
+  box-shadow: var(--shadow-soft);
+}
+
+.btn-primary {
+  border: 1px solid color-mix(in srgb, var(--accent) 70%, #8eaaff 30%);
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, var(--accent), #4a97ff);
+  color: #f4f8ff;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(61, 122, 255, 0.35);
+}
+
+.btn-secondary {
+  border: 1px solid color-mix(in srgb, var(--border-soft) 86%, transparent);
+  border-radius: 0.75rem;
+  background: color-mix(in srgb, var(--surface-1) 92%, transparent);
+  color: var(--text-strong);
+  font-weight: 500;
+}
+
+.btn-secondary:hover {
+  border-color: color-mix(in srgb, var(--accent-2) 50%, var(--border-soft) 50%);
+  color: #f6fbff;
+}
+
+.chip {
+  border: 1px solid color-mix(in srgb, var(--border-soft) 76%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--surface-2) 90%, transparent);
+  color: var(--text-muted);
+}
+
+.input-modern {
+  border: 1px solid color-mix(in srgb, var(--border-soft) 86%, transparent);
+  border-radius: 0.8rem;
+  background: color-mix(in srgb, var(--surface-1) 95%, transparent);
+  color: var(--text-strong);
+}
+
+.input-modern::placeholder {
+  color: color-mix(in srgb, var(--text-muted) 82%, transparent);
+}
+
+.input-modern:focus {
+  border-color: color-mix(in srgb, var(--accent-2) 60%, var(--border-soft) 40%);
+  box-shadow: 0 0 0 3px rgba(52, 198, 255, 0.2);
+  outline: none;
+}
+
+.table-surface {
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--border-soft) 76%, transparent);
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--surface-1) 90%, transparent);
+  box-shadow: var(--shadow-soft);
+}
+
+.fade-up {
+  animation: fade-up 500ms ease both;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes now-trending-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.legal-prose > * + * {
+  margin-top: 1rem;
+}
+
+.legal-prose h2 {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.legal-prose ul {
+  list-style: disc;
+  padding-left: 1.1rem;
+}
+
+.legal-prose li {
+  margin-top: 0.45rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition-duration: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+}

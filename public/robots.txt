@@ -1,0 +1,39 @@
+# Reduce crawler load and hosting cost from deep-page scraping.
+
+User-agent: *
+Disallow: /movie/
+Disallow: /tv/
+Disallow: /search
+Disallow: /api/
+Disallow: /auth/
+Disallow: /profile
+Disallow: /donation/success
+Disallow: /_next/
+
+Allow: /
+Allow: /leaderboard
+Allow: /how-it-works
+Allow: /privacy
+Allow: /terms
+
+# Explicitly block common AI/data-collection crawlers.
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
