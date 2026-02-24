@@ -3,6 +3,8 @@
 
 CineCause is a movie-and-TV inspired giving platform.
 
+Check out the live app: [cinecause.com](https://www.cinecause.com)
+
 ## Motivation
 
 Movies and shows can hit hard. A story can change how you see people, community, or the world, and leave you wanting to do something real after the credits roll.
