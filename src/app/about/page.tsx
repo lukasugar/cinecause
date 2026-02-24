@@ -1,7 +1,7 @@
 import { Bitcoin } from 'lucide-react';
 
 export const metadata = {
-  title: 'About - CineCause ',
+  title: 'About - CineCause',
   description: 'Why CineCause exists and how to support the project.',
 };
 
