@@ -17,8 +17,30 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.cinecause.com'),
   title: 'CineCause - Watch Films That Matter',
   description: 'Discover movies and TV shows that inspire giving. Browse popular titles and donate to charity.',
+  openGraph: {
+    title: 'CineCause - Watch Films That Matter',
+    description: 'Discover movies and TV shows that inspire giving. Browse popular titles and donate to charity.',
+    url: '/',
+    siteName: 'CineCause',
+    type: 'website',
+    images: [
+      {
+        url: '/images/cinecause-big.png',
+        width: 791,
+        height: 458,
+        alt: 'CineCause - Watch Films That Matter',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'CineCause - Watch Films That Matter',
+    description: 'Discover movies and TV shows that inspire giving. Browse popular titles and donate to charity.',
+    images: ['/images/cinecause-big.png'],
+  },
 };
 
 export default function RootLayout({
