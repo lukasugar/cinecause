@@ -1,5 +1,5 @@
 # CineCause
-![CineCause banner](public/images/cinecause-big.png)
+<img src="public/images/cinecause-big.png" alt="CineCause banner" width="480" />
 
 CineCause is a movie-and-TV inspired giving platform.
 
