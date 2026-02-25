@@ -18,10 +18,10 @@ const fraunces = Fraunces({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.cinecause.com'),
-  title: 'CineCause - Watch Films That Matter',
+  title: 'CineCause - Donate to Charity, Inspired by Movies',
   description: 'Discover movies and TV shows that inspire giving. Browse popular titles and donate to charity.',
   openGraph: {
-    title: 'CineCause - Watch Films That Matter',
+    title: 'CineCause - Donate to Charity, Inspired by Movies',
     description: 'Discover movies and TV shows that inspire giving. Browse popular titles and donate to charity.',
     url: '/',
     siteName: 'CineCause',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'CineCause - Watch Films That Matter',
+    title: 'CineCause - Donate to Charity, Inspired by Movies',
     description: 'Discover movies and TV shows that inspire giving. Browse popular titles and donate to charity.',
     images: ['/images/cinecause-big.png'],
   },
